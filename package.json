@@ -1,0 +1,42 @@
+{
+  "name": "@warren-bank/build-dist",
+  "version": "1.0.0",
+  "description": "Opinionated build tool for hybrid NPM modules.",
+  "license": "GPL-2.0",
+  "files": [
+    "bin/",
+    "webpack/"
+  ],
+  "bin": {
+    "build-dist": "./bin/build-dist.js"
+  },
+  "exports": {
+    "./webpack": {
+      "import": "./webpack/esm/webpack-base.config.js",
+      "require": "./webpack/cjs/webpack-base.config.js"
+    }
+  },
+  "dependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
+    "babel-loader": "^9.1.3",
+    "webpack-cli": "^5.1.4",
+    "webpack": "^5.95.0"
+  },
+  "author": {
+    "name": "Warren R. Bank",
+    "email": "warren.r.bank@gmail.com",
+    "url": "https://github.com/warren-bank"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/warren-bank/node-build-dist"
+  },
+  "keywords": [
+    "webpack",
+    "build",
+    "commonjs",
+    "esm",
+    "browser"
+  ]
+}
